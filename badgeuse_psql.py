@@ -18,11 +18,11 @@ class Badgeuse_psql:
     def connect(self):
         """Connecte le code a la base de donnée badgeuse stocké sur always data"""
         conn = connect(
-            host="postgresql-projet-badgeuse.alwaysdata.net",
-            port="5432",
-            database="projet-badgeuse_bdd",
-            user="projet-badgeuse_admin",
-            password="Pbadgeuse2022!")
+            host="",
+            port="",
+            database="",
+            user="",
+            password="")
         return conn
 
     def f_add(self, n, l, p, e):
