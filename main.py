@@ -10,7 +10,7 @@ x = 0
 while x < 5:
     data = scan_raspberry.read_card()
     if badgeuse_psql.root(data):
-        print("L'admin a arrêté le programme")
+        print("L'admin à arrêté le programme")
         break 
     elif badgeuse_psql.check(data):
         badgeuse_psql.card_c(data)
@@ -22,7 +22,7 @@ while x < 5:
             badgeuse_psql.card_c(data)
             badgeuse_psql.commit()
 
-            print("Carte ajouté, vous pouvez passer")
+            print("Carte ajoutée, vous pouvez passer")
         else:
             print("Votre carte n'est pas valable")
     x += 1
