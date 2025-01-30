@@ -1,0 +1,41 @@
+body{
+    background-color: rgb(20, 20, 20);
+    color: grey;
+}
+
+h1{
+    color: gray;  
+    font-size: 42;
+}
+
+h2{
+    color: gray;  
+    font-size: 30;
+}
+
+.center {
+    border: 5px solid;
+    text-align: center;
+    background-color: rgb(20, 20, 20);
+    border-color: rgb(20, 20, 20);
+}
+
+.button {
+    text-align: center
+}
+
+button{
+    font-size: 25;
+    background-color: black;
+    color: azure;
+}
+
+.formulaire{
+    color: grey;
+}
+
+.tr{
+    border: 5px solid;
+    position: absolute;
+    text-align: right;
+}

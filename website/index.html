@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Page d'accueil</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <nav class="topnav">
+            <a href="index.html">Accueil</a>
+            <a href="sources.html">Sources</a>
+            <a href="login.html">Login</a>
+        </nav>
+
+        <div class="center"><h1>Description de notre projet</h1></div>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                    <img src="screen4.png" style="width:100%; height: 80%">
+            </div>
+  
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                    <img src="screen5.png" style="width:100%; height: 80%">
+            </div>
+  
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                    <img src="screen6.png" style="width:100%; height: 80%">
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                    <img src="screen7.png" style="width:100%; height: 80%">
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                    <img src="screen7.png" style="width:100%; height: 80%">
+            </div>
+        
+  
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+  
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  let i;
+                  let slides = document.getElementsByClassName("mySlides");
+                  let dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+            </script>
+
+            <div class="txt">
+              <p>Ce projet prend la suite d’un projet similaire, mis à bien par les élèves de terminale de l’année dernière. L’objectif est de pouvoir reconnaitre un badge associé à une personne sur une base de données se trouvant sur internet. Pour ce travail, nous avons fait le choix d’utiliser un Raspberry Py 4, un lecteur NFC (= Near Field Communication) et les différents badges fournis avec. À la différence des élèves de l’année dernière, nous optons pour le NFC, là où ils avaient utilisé le RFID (=Radio Frequency IDentification).</p>
+              <a href="#information">pour plus d'informations</a>
+            </div>
+
+            <footer>
+              <p>L'équipe Terminale NSI<br>
+              <p>Pour nous contacter: <a href="#terminalensi2022@gmail.com">terminalensi2022@gmail.com</a></p>
+            </footer>
+
+
+
+    </body>
+</html>
